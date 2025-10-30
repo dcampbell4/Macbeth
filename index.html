@@ -35,14 +35,14 @@
         }
         
         /* Styling for the right column (Source Text Viewer) */
-        .text-viewer-column { /* Changed from pdf-viewer-column */
+        .text-viewer-column { 
             position: sticky; 
             top: 0;
             height: 100vh; 
             background-color: #ffffff;
             border-left: 2px solid #fee2e2; 
             padding: 2rem;
-            overflow-y: scroll; /* Allows the text to scroll independently */
+            overflow-y: scroll; 
         }
 
         /* Styling for the embedded text */
@@ -56,28 +56,38 @@
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 0.5rem;
         }
+        
+        /* --- START: DIALOGUE FORMATTING FIX --- */
         .macbeth-text p {
             font-family: 'Noto Serif', serif;
             margin-bottom: 0.25rem;
             line-height: 1.4;
             color: #334155;
-            padding-left: 1rem;
+            /* Indent the whole paragraph */
+            padding-left: 130px; 
+            /* Hang the character name back into the margin */
+            text-indent: -130px; 
         }
         .macbeth-text .character-name {
             font-weight: 700;
-            color: #991b1c; /* Darker red for speaker name */
+            color: #991b1c; 
             display: inline-block;
-            width: 80px; /* Fixed width for alignment */
-            padding-right: 10px;
+            /* Increase fixed width for names and align right */
+            width: 115px; 
+            padding-right: 15px; /* Clear space after name */
             text-align: right;
+            white-space: nowrap; /* Prevent long names from wrapping */
         }
         .macbeth-text .stage-direction {
+            /* Reset the indent for stage directions so they stay left-aligned */
             font-style: italic;
             color: #64748b;
             font-size: 0.9rem;
             padding-left: 0;
             margin-bottom: 0.5rem;
+            text-indent: 0; 
         }
+        /* --- END: DIALOGUE FORMATTING FIX --- */
 
         /* Original card/content styling adjusted for the new layout */
         .card {
