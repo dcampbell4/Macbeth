@@ -13,15 +13,15 @@
             color: #1e293b;
             min-height: 100vh;
         }
-        /* New styling for the two-column grid wrapper */
+        /* Main two-column grid wrapper */
         .grid-wrapper {
             display: grid;
-            grid-template-columns: 1fr; /* Default to single column on small screens */
+            grid-template-columns: 1fr; 
             min-height: 100vh; 
         }
-        @media (min-width: 1024px) { /* lg breakpoint for side-by-side view */
+        @media (min-width: 1024px) { 
             .grid-wrapper {
-                grid-template-columns: 50% 50%; /* 50/50 split on large screens */
+                grid-template-columns: 50% 50%; 
             }
         }
 
@@ -57,29 +57,28 @@
             padding-bottom: 0.5rem;
         }
         
-        /* --- START: DIALOGUE FORMATTING FIX --- */
+        /* --- START: DIALOGUE FORMATTING FIX for VERSE --- */
         .macbeth-text p {
             font-family: 'Noto Serif', serif;
             margin-bottom: 0.25rem;
             line-height: 1.4;
             color: #334155;
-            /* Indent the whole paragraph */
-            padding-left: 130px; 
-            /* Hang the character name back into the margin */
-            text-indent: -130px; 
+            padding-left: 0; /* Reset padding */
+            text-indent: 0; /* Reset indent */
         }
         .macbeth-text .character-name {
             font-weight: 700;
             color: #991b1c; 
+            /* Use a fixed width and margin to create separation, 
+               but allow the dialogue to follow immediately on the same line. */
             display: inline-block;
-            /* Increase fixed width for names and align right */
-            width: 115px; 
-            padding-right: 15px; /* Clear space after name */
+            width: 120px; 
+            margin-right: 15px; /* Clear space after name */
             text-align: right;
-            white-space: nowrap; /* Prevent long names from wrapping */
+            white-space: nowrap; 
         }
         .macbeth-text .stage-direction {
-            /* Reset the indent for stage directions so they stay left-aligned */
+            /* Stage directions should still be flush left */
             font-style: italic;
             color: #64748b;
             font-size: 0.9rem;
@@ -87,7 +86,8 @@
             margin-bottom: 0.5rem;
             text-indent: 0; 
         }
-        /* --- END: DIALOGUE FORMATTING FIX --- */
+        /* --- END: DIALOGUE FORMATTING FIX for VERSE --- */
+
 
         /* Original card/content styling adjusted for the new layout */
         .card {
@@ -96,7 +96,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             padding: 1.5rem;
             margin-bottom: 2rem;
-            border-top: 5px solid #b91c1c; /* Primary Red accent */
+            border-top: 5px solid #b91c1c; 
         }
         .scene-title {
             font-size: 1.75rem;
