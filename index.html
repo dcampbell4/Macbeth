@@ -57,32 +57,36 @@
             padding-bottom: 0.5rem;
         }
         
-        /* --- START: DIALOGUE FORMATTING FIX for VERSE --- */
+        /* --- START: DIALOGUE FORMATTING FIX for VERSE (Hanging Indent) --- */
         .macbeth-text p {
             font-family: 'Noto Serif', serif;
             margin-bottom: 0.25rem;
             line-height: 1.4;
             color: #334155;
-            padding-left: 0; 
+            /* Indent ALL lines of dialogue */
+            padding-left: 120px; 
             text-indent: 0; 
         }
         .macbeth-text .character-name {
             font-weight: 700;
             color: #991b1c; 
             display: inline-block;
-            /* No fixed width: names start flush left */
             
-            /* Add a substantial margin for clear separation */
-            margin-right: 25px; 
+            /* Pull the name back flush left into the padding area */
+            margin-left: -120px; 
             
-            text-align: left; /* Ensure the name starts at the extreme left */
+            /* Add space between name and dialogue */
+            margin-right: 20px; 
+            
+            text-align: left; 
             white-space: nowrap; 
         }
         .macbeth-text .stage-direction {
+            /* Stage directions are not dialogue, so they should be flush left */
             font-style: italic;
             color: #64748b;
             font-size: 0.9rem;
-            padding-left: 0;
+            padding-left: 0; 
             margin-bottom: 0.5rem;
             text-indent: 0; 
         }
